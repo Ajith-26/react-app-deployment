@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseUrl = "http://localhost:8899/account-mgmt";
+const baseUrl = "https://spring-boot-app-deployment-production.up.railway.app/account-mgmt";
 export default class BankApi{
     static fetchAllAccounts(){
         const response = axios.get(baseUrl+"/all")

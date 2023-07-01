@@ -1,0 +1,41 @@
+@media only screen and (max-width: 800px){
+    .depImg,.delImg{
+        width:150px;
+        height: 150px;
+        margin: 0px auto;
+    }
+    .fundTrans{
+        height: 200px;
+        width: 250px;
+    }
+}
+.welcomeText{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.amountStyle{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.serviceStyle{
+    margin: 0px auto;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.btnSize{
+    height: 40px;
+    width: 160px;
+}
+#demo{
+    width: 640px;
+    margin: 0px auto;
+}
+
+@media only screen and (max-width: 600px){
+    .carousel-item img{
+        height: 240px;
+    }
+    #demo{
+        width: 300px;
+        margin: 0px auto;
+    }
+}

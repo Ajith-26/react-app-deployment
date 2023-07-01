@@ -8,7 +8,6 @@ function HomePage() {
         <div className='row'>
             <h1 className='mt-4 welcomeText'>Welcome to AJ banking application</h1>
         </div>
-        <marquee style={{color:'green'}}>Hello All!!! Welcome to our AJ banking application</marquee>
         <Carousel/>
         <div className='row serviceStyle'>
             <h3>Services we provide</h3>

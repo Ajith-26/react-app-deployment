@@ -11,7 +11,7 @@ const AccountValidationSchema = Yup.object().shape({
         .matches(/^[A-Z]{1}[a-zA-Z]* [a-zA-Z]+$/,"Must contain only alphabet, first character should be caps, should be in format {firstname lastname}"),
     customerEmailId:Yup.string()
         .email("Invalid email id")
-        .matches(/^[a-zA-Z]{1}[a-zA-Z0-9.]+@abc.com$/, "Email id should be in the form xxx@wipro.com and first letter character should be alphabet")  
+        .matches(/^[a-zA-Z]{1}[a-zA-Z0-9.]+@abc.com$/, "Email id should be in the form xxx@abc.com and first letter character should be alphabet")  
         .required("Customer mail-id is required"),
     customerMobileNo: Yup.string()
         .required("Mobile No is required")

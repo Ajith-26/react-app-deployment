@@ -23,6 +23,7 @@ const AccountValidationSchema = Yup.object().shape({
 });
 function CreateAccount(){
     const location = useLocation();
+    let hidden = "";
     let editOp = false;
     let formValues = {};
     let initValues = {customerName:"", customerEmailId:"", customerMobileNo:"", accountType:""};
@@ -34,6 +35,7 @@ function CreateAccount(){
     }
     console.log(editOp);
     console.log(formValues);
+    hidden = editOp ? "hidden":"";
     const editOperation = (vals) => {
         if(vals.customerEmailId === formValues.customerEmailId && vals.customerMobileNo === formValues.customerMobileNo && vals.customerName === formValues.customerName){
             alert("Updated...");
@@ -96,12 +98,12 @@ function CreateAccount(){
                                 </div>
                             </div>
                             <div className="mb-3 row">
-                                <div id ="my-radio-group" className="mb-2 col-10">Account Type</div>
+                                <div id ="my-radio-group" hidden ={hidden} className="mb-2 col-10">Account Type</div>
                                 <div role="group" aria-labelledby="my-radio-group">    
-                                    <Field className ="form-check-input" type="radio" name="accountType" value="Savings" disabled={editOp}/>
-                                    <label htmlFor="accountType" className="form-check-label ms-3">Savings</label><br></br>
-                                    <Field className ="form-check-input" type="radio" name="accountType" value="Current" disabled={editOp}/>
-                                    <label htmlFor="accountType" className="form-check-label ms-3">Current</label><br></br>
+                                    {!editOp && <Field className ="form-check-input" type="radio" name="accountType" value="Savings" disabled={editOp}/>}
+                                    <label hidden ={hidden} htmlFor="accountType" className="form-check-label ms-3">Savings</label><br></br>
+                                    {!editOp && <Field className ="form-check-input" type="radio" name="accountType" value="Current" disabled={editOp}/>}
+                                    <label hidden ={hidden} htmlFor="accountType" className="form-check-label ms-3">Current</label><br></br>
                                     {!editOp && touched.accountType && errors.accountType && <div style={{color:'red'}}>{errors.accountType}</div>}
                                 </div>
                             </div>
